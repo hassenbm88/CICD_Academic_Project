@@ -47,6 +47,6 @@ public class StockServiceImplTest {
 		stockService.deleteStock(savedStock.getIdStock());
 		assertNull(stockService.retrieveStock(savedStock.getIdStock()));
 	}
-
+//
 }
 */
