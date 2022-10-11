@@ -1,4 +1,4 @@
-/*package com.esprit.examen.services;
+package com.esprit.examen.services;
 
 import static org.junit.Assert.*;
 import java.util.List;
@@ -24,11 +24,11 @@ public class StockServiceImplTest {
 		
 	//	assertEquals(expected+1, stockService.retrieveAllStocks().size());
 		assertNotNull(savedStock.getLibelleStock());
-		stockService.deleteStock(savedStock.getIdStock());
+		//stockService.deleteStock(savedStock.getIdStock());
 		
 	} 
 	
-	@Test
+	/*@Test
 	public void testAddStockOptimized() {
 
 		Stock s = new Stock("stock test",10,100);
@@ -39,14 +39,15 @@ public class StockServiceImplTest {
 		stockService.deleteStock(savedStock.getIdStock());
 		
 	} 
-	
-	@Test
+	*/
+
+
+	/*@Test
 	public void testDeleteStock() {
 		Stock s = new Stock("stock test",30,60);
 		Stock savedStock= stockService.addStock(s);
 		stockService.deleteStock(savedStock.getIdStock());
 		assertNull(stockService.retrieveStock(savedStock.getIdStock()));
 	}
-
-}
 */
+}
