@@ -41,7 +41,7 @@ public class ClientServiceImplTest {
 		assertNotNull(client.getCategorieClient());
 		assertTrue(client.getNom().length() > 0);
 		clientService.deleteClient(client.getIdClient());
-
+//
 	}
 	@Test
 	public void testDeleteClient() throws ParseException {
