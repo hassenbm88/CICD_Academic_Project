@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import javax.transaction.Transactional;
+
+import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.esprit.examen.entities.DetailFacture;
@@ -54,7 +56,7 @@ public class FactureServiceImpl implements IFactureService {
 	 * calculer les montants remise et le montant total d'un détail facture
 	 * ainsi que les montants d'une facture
 	 */
-	private Facture addDetailsFacture(Facture f, Set<DetailFacture> detailsFacture) {
+	/*private Facture addDetailsFacture(Facture f, Set<DetailFacture> detailsFacture) {
 		float montantFacture = 0;
 		float montantRemise = 0;
 		for (DetailFacture detail : detailsFacture) {
@@ -77,7 +79,7 @@ public class FactureServiceImpl implements IFactureService {
 		f.setMontantRemise(montantRemise);
 		return f;
 	}
-
+*/
 	@Override
 	public void cancelFacture(Long factureId) {
 		// Méthode 01
@@ -100,6 +102,10 @@ public class FactureServiceImpl implements IFactureService {
 	@Override
 	public List<Facture> getFacturesByFournisseur(Long idFournisseur) {
 		Fournisseur fournisseur = fournisseurRepository.findById(idFournisseur).orElse(null);
+		if (fournisseur == null)
+				{
+			throw new ObjectNotFoundException(idFournisseur,"fournisseur not found");
+		}
 		return (List<Facture>) fournisseur.getFactures();
 	}
 

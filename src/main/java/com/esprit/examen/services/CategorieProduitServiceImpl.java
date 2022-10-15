@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.esprit.examen.entities.CategorieProduit;
 import com.esprit.examen.repositories.CategorieProduitRepository;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
+
 public class CategorieProduitServiceImpl implements ICategorieProduitService {
 
 	
@@ -22,6 +25,8 @@ public class CategorieProduitServiceImpl implements ICategorieProduitService {
 	@Override
 	public CategorieProduit addCategorieProduit(CategorieProduit cp) {
 		categorieProduitRepository.save(cp);
+		log.info("category added susccefully");
+
 		return cp;
 	}
 
@@ -34,6 +39,8 @@ public class CategorieProduitServiceImpl implements ICategorieProduitService {
 	@Override
 	public CategorieProduit updateCategorieProduit(CategorieProduit cp) {
 		categorieProduitRepository.save(cp);
+		log.info("category updated susccefully");
+
 		return cp;
 	}
 
