@@ -1,8 +1,9 @@
-/*package com.esprit.examen.services;
+package com.esprit.examen.services;
 
 import static org.junit.Assert.*;
 import java.util.List;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,7 +25,7 @@ public class StockServiceImplTest {
 
 	//	assertEquals(expected+1, stockService.retrieveAllStocks().size());
 		assertNotNull(savedStock.getLibelleStock());
-		stockService.deleteStock(savedStock.getIdStock());
+		// stockService.deleteStock(savedStock.getIdStock());
 
 	}
 
@@ -49,4 +50,4 @@ public class StockServiceImplTest {
 	}
 //
 }
-*/
+
