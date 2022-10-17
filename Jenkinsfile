@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage('Getting project from Git') {
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/hassenbm88/CICD_Academic_Project.git'], extensions: [], userRemoteConfigs: [[credentialsId: '18558545-93a9-448f-bf74-85184c601676', url: 'https://github.com/hassenbm88/CICD_Academic_Project.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/yassine']], browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/hassenbm88/CICD_Academic_Project.git'], extensions: [], userRemoteConfigs: [[credentialsId: '18558545-93a9-448f-bf74-85184c601676', url: 'https://github.com/hassenbm88/CICD_Academic_Project.git']]])
             }
         }
         
@@ -16,6 +16,12 @@ pipeline{
                 sh "mvn -B -DskipTests clean  " 
             }
         }
+                stage('Cleaning versiont') {
+            steps{
+                sh "mvn --version  " 
+            }
+        }
+        
         
         
         stage('Artifact Construction') {
