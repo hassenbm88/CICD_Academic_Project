@@ -35,7 +35,13 @@ pipeline{
                 sh "mvn test " 
             }
         }
-        
+         stage('Code Quality Check via SonarQube') {
+            steps{
+                
+             sh "mvn sonar:sonar -Dsonar.projectKey=root -Dsonar.host.url=http://172.10.0.140:9000  -Dsonar.login=26bfe8f553821763d1a1d57f3fedee42558d7253"
+               
+            }
+        }
      
        
         
