@@ -42,12 +42,13 @@ pipeline{
                
             }
         }
-        stage('nexsu')
-        steps{script{
-            configFileProvider([configFile(fileId: '729fcc5d-5f72-4798-afba-d14f27521721', variable: 'settings')]) 
+        stage('nexsu'){
+           steps{
+               script{
+                 configFileProvider([configFile(fileId: '729fcc5d-5f72-4798-afba-d14f27521721', variable: 'settings')]) 
               {sh 'mvn  -B -DskipTests deploy -s $settings'
               }}
-        }
+           }}
        
         
 
