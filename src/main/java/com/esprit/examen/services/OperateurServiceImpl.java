@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.esprit.examen.entities.Operateur;
 import com.esprit.examen.repositories.OperateurRepository;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
+
 public class OperateurServiceImpl implements IOperateurService {
 
 	@Autowired
@@ -20,6 +23,8 @@ public class OperateurServiceImpl implements IOperateurService {
 	@Override
 	public Operateur addOperateur(Operateur o) {
 		operateurRepository.save(o);
+		log.info("Operateur added successfully");
+
 		return o;
 	}
 
@@ -32,6 +37,8 @@ public class OperateurServiceImpl implements IOperateurService {
 	@Override
 	public Operateur updateOperateur(Operateur o) {
 		operateurRepository.save(o);
+		log.info("Operateur updated successfully");
+
 		return o;
 	}
 
