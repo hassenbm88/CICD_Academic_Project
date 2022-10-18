@@ -21,14 +21,13 @@ public class StockServiceImpl implements IStockService {
 	public List<Stock> retrieveAllStocks() {
 		// récuperer la date à l'instant t1
 		log.info("In method retrieveAllStocks");
-		List<Stock> stocks = (List<Stock>) stockRepository.findAll();
-		for (Stock stock : stocks) {
+		for (Stock stock : stockRepository.findAll()) {
 			log.info(" Stock : " + stock);
 		}
 		log.info("out of method retrieveAllStocks");
 		// récuperer la date à l'instant t2
 		// temps execution = t2 - t1
-		return stocks;
+		return stockRepository.findAll();
 	}
 
 	@Override
@@ -71,11 +70,10 @@ public class StockServiceImpl implements IStockService {
 		String msgDate = sdf.format(now);
 		String finalMessage = "";
 		String newLine = System.getProperty("line.separator");
-		List<Stock> stocksEnRouge = (List<Stock>) stockRepository.retrieveStatusStock();
-		for (int i = 0; i < stocksEnRouge.size(); i++) {
+		for (int i = 0; i < stockRepository.retrieveStatusStock().size(); i++) {
 			finalMessage = newLine + finalMessage + msgDate + newLine + ": le stock "
-					+ stocksEnRouge.get(i).getLibelleStock() + " a une quantité de " + stocksEnRouge.get(i).getQte()
-					+ " inférieur à la quantité minimale a ne pas dépasser de " + stocksEnRouge.get(i).getQteMin()
+					+ stockRepository.retrieveStatusStock().get(i).getLibelleStock() + " a une quantité de " + stockRepository.retrieveStatusStock().get(i).getQte()
+					+ " inférieur à la quantité minimale a ne pas dépasser de " + stockRepository.retrieveStatusStock().get(i).getQteMin()
 					+ newLine;
 
 		}
