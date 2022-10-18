@@ -51,7 +51,9 @@ pipeline{
            }}
        
         
-        post {
+       
+} 
+     post {
             always{
                 archiveArtifacts artifacts: '*.csv', onlyIfSuccessful: true
                 
@@ -64,6 +66,5 @@ pipeline{
             }
         }
      
-} 
 }
        
