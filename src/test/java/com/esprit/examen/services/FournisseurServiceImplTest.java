@@ -46,7 +46,7 @@ public class FournisseurServiceImplTest {
 
 
 
-    @RepeatedTest(1)
+    @Test
     void testRetrieveFournisseur() {
 
         DetailFournisseur detailFournisseur = new DetailFournisseur();
@@ -64,7 +64,7 @@ public class FournisseurServiceImplTest {
         verify(fournisseurRepository).findById((Long) any());
     }
 
-    @RepeatedTest(1)
+    @Test
     void testAddFournisseur() {
         DetailFournisseur detailFournisseur = new DetailFournisseur();
         detailFournisseur.setEmail("hassen.bm@esprit.tn");
