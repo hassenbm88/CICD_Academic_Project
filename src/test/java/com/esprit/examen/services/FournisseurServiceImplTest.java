@@ -11,6 +11,7 @@ import com.esprit.examen.repositories.SecteurActiviteRepository;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +46,7 @@ public class FournisseurServiceImplTest {
 
 
 
-    @Test
+    @RepeatedTest(1)
     void testRetrieveFournisseur() {
 
         DetailFournisseur detailFournisseur = new DetailFournisseur();
@@ -63,7 +64,7 @@ public class FournisseurServiceImplTest {
         verify(fournisseurRepository).findById((Long) any());
     }
 
-    @Test
+    @RepeatedTest(1)
     void testAddFournisseur() {
         DetailFournisseur detailFournisseur = new DetailFournisseur();
         detailFournisseur.setEmail("hassen.bm@esprit.tn");
