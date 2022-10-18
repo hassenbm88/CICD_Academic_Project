@@ -61,7 +61,7 @@ public class FournisseurServiceImplTest {
 
     @Test
 
-    void testRetrieveAllFournisseurs2() {
+    void testRetrieveAllFournisseurs() {
         DetailFournisseur detailFournisseur = new DetailFournisseur();
         detailFournisseur.setAdresse("Adresse");
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
@@ -344,48 +344,7 @@ public class FournisseurServiceImplTest {
     }
 
 
-    @Test
-    void testRetrieveFournisseur() {
-        DetailFournisseur detailFournisseur = new DetailFournisseur();
-        detailFournisseur.setAdresse("Adresse");
-        LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
-        detailFournisseur.setDateDebutCollaboration(Date.from(atStartOfDayResult.atZone(ZoneId.of("UTC")).toInstant()));
-        detailFournisseur.setEmail("jane.doe@example.org");
-        detailFournisseur.setFournisseur(new Fournisseur());
-        detailFournisseur.setIdDetailFournisseur(1L);
-        detailFournisseur.setMatricule("Matricule");
 
-        Fournisseur fournisseur = new Fournisseur();
-        fournisseur.setCategorieFournisseur(CategorieFournisseur.ORDINAIRE);
-        fournisseur.setCode("Code");
-        fournisseur.setDetailFournisseur(detailFournisseur);
-        fournisseur.setFactures(new HashSet<>());
-        fournisseur.setIdFournisseur(1L);
-        fournisseur.setLibelle("Libelle");
-        fournisseur.setSecteurActivites(new HashSet<>());
-
-        DetailFournisseur detailFournisseur1 = new DetailFournisseur();
-        detailFournisseur1.setAdresse("Adresse");
-        LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
-        detailFournisseur1.setDateDebutCollaboration(Date.from(atStartOfDayResult1.atZone(ZoneId.of("UTC")).toInstant()));
-        detailFournisseur1.setEmail("jane.doe@example.org");
-        detailFournisseur1.setFournisseur(fournisseur);
-        detailFournisseur1.setIdDetailFournisseur(1L);
-        detailFournisseur1.setMatricule("Matricule");
-
-        Fournisseur fournisseur1 = new Fournisseur();
-        fournisseur1.setCategorieFournisseur(CategorieFournisseur.ORDINAIRE);
-        fournisseur1.setCode("Code");
-        fournisseur1.setDetailFournisseur(detailFournisseur1);
-        fournisseur1.setFactures(new HashSet<>());
-        fournisseur1.setIdFournisseur(1L);
-        fournisseur1.setLibelle("Libelle");
-        fournisseur1.setSecteurActivites(new HashSet<>());
-        Optional<Fournisseur> ofResult = Optional.of(fournisseur1);
-        when(fournisseurRepository.findById((Long) any())).thenReturn(ofResult);
-        assertSame(fournisseur1, fournisseurServiceImpl.retrieveFournisseur(123L));
-        verify(fournisseurRepository).findById((Long) any());
-    }
 
 
 
