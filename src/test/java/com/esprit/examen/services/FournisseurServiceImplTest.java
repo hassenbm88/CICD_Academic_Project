@@ -70,7 +70,7 @@ public class FournisseurServiceImplTest {
         detailFournisseur.setEmail("hassen.bm@esprit.tn");
         detailFournisseur.setFournisseur(new Fournisseur());
 
-
+//hassen commentaire test
         Fournisseur fournisseur = new Fournisseur();
         fournisseur.setCode("0000");
         fournisseur.setDetailFournisseur(detailFournisseur);
