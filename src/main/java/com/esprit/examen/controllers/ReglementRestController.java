@@ -24,6 +24,7 @@ public class ReglementRestController {
 
     @PostMapping("/add-reglement")
     @ResponseBody
+    @SuppressWarnings("java:S4684")
     public Reglement addReglement(@RequestBody Reglement r) {
         return reglementService.addReglement(r);
     }

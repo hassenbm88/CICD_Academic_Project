@@ -39,6 +39,7 @@ public class FournisseurRestController {
 
 	@PostMapping("/add-fournisseur")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Fournisseur addFournisseur(@RequestBody Fournisseur f) {
 		return fournisseurService.addFournisseur(f);
 	}
@@ -51,6 +52,7 @@ public class FournisseurRestController {
 
 	@PutMapping("/modify-fournisseur")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Fournisseur modifyFournisseur(@RequestBody Fournisseur fournisseur) {
 		return fournisseurService.updateFournisseur(fournisseur);
 	}

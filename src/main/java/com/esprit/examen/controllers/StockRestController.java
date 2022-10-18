@@ -39,6 +39,7 @@ public class StockRestController {
 	// http://localhost:8089/SpringMVC/stock/add-stock
 	@PostMapping("/add-stock")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Stock addStock(@RequestBody Stock s) {
 		Stock stock = stockService.addStock(s);
 		return stock;
@@ -53,6 +54,7 @@ public class StockRestController {
 	// http://localhost:8089/SpringMVC/stock/modify-stock
 	@PutMapping("/modify-stock")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Stock modifyStock(@RequestBody Stock stock) {
 		return stockService.updateStock(stock);
 	}

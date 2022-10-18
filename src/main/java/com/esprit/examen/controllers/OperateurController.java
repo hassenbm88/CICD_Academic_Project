@@ -32,6 +32,7 @@ public class OperateurController {
 
 	@PostMapping("/add-operateur")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Operateur addOperateur(@RequestBody Operateur op) {
 		return operateurService.addOperateur(op);
 	}
@@ -44,6 +45,7 @@ public class OperateurController {
 
 	@PutMapping("/modify-operateur")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Operateur modifyOperateur(@RequestBody Operateur operateur) {
 		return operateurService.updateOperateur(operateur);
 	}

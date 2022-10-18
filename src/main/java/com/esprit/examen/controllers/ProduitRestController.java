@@ -34,6 +34,7 @@ public class ProduitRestController {
 
 	@PostMapping("/add-produit")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Produit addProduit(@RequestBody Produit p) {
 		return produitService.addProduit(p);
 	}
@@ -46,6 +47,7 @@ public class ProduitRestController {
 
 	@PutMapping("/modify-produit")
 	@ResponseBody
+	@SuppressWarnings("java:S4684")
 	public Produit modifyProduit(@RequestBody Produit p) {
 		return produitService.updateProduit(p);
 	}
