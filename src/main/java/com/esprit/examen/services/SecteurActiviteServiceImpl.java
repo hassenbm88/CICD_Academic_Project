@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.esprit.examen.entities.SecteurActivite;
 import com.esprit.examen.repositories.SecteurActiviteRepository;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
+
 public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
 
 	@Autowired
@@ -20,6 +23,8 @@ public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
 	@Override
 	public SecteurActivite addSecteurActivite(SecteurActivite sa) {
 		secteurActiviteRepository.save(sa);
+		log.info("Secteur added susccefully");
+
 		return sa;
 	}
 
@@ -32,6 +37,8 @@ public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
 	@Override
 	public SecteurActivite updateSecteurActivite(SecteurActivite sa) {
 		secteurActiviteRepository.save(sa);
+		log.info("Secteur updated susccefully");
+
 		return sa;
 	}
 
