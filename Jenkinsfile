@@ -53,14 +53,14 @@ configFileProvider([configFile(fileId: 'maven-settings', variable: 'settings')])
                 }
             }
         }
-          post {
+          
+            
+} 
+    
+    post {
         always {
             cleanWhenSuccess()
         }
     }
-        
-
-     
-} 
 }
        
