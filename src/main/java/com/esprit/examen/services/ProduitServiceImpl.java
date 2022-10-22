@@ -62,10 +62,12 @@ public class ProduitServiceImpl implements IProduitService {
 	public void assignProduitToStock(Long idProduit, Long idStock) {
 		Produit produit = produitRepository.findById(idProduit).orElse(null);
 		Stock stock = stockRepository.findById(idStock).orElse(null);
-		produit.setStock(stock);
-		produitRepository.save(produit);
+		try {
+			produit.setStock(stock);
+			produitRepository.save(produit);
 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-
-
 }

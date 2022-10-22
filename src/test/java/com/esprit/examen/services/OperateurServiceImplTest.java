@@ -53,6 +53,6 @@ public class OperateurServiceImplTest {
         Operateur operateur = new Operateur(4L, "hhh", "ccc","www");
         repository.save(operateur);
         Operateur actualResult = service.retrieveOperateur(4L);
-        assertEquals(operateur.getIdOperateur(), actualResult);
+        assertEquals(operateur, actualResult);
     }
 }
