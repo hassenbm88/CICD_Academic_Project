@@ -53,7 +53,23 @@ configFileProvider([configFile(fileId: 'maven-settings', variable: 'settings')])
                 }
             }
         }
-          
+          stage('Build Docker Image') {
+                      steps {
+                          script {
+                            sh 'docker build -t hsounabm/spring-app .'
+                          }
+                      }
+                  }
+                  stage('Push Docker Image') {
+                      steps {
+                          script {
+                           withCredentials([string(credentialsId: 'hsounabm', variable: 'dockerhubpwd')]) {
+                              sh 'docker login -u hsounabm -p ${dockerhubpwd}'
+                           }
+                           sh 'docker push hsounabm/spring-app'
+                          }
+                      }
+                  }
             
 } 
     
