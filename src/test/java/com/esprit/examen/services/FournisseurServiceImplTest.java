@@ -1,11 +1,18 @@
 package com.esprit.examen.services;
 
+import com.esprit.examen.entities.CategorieFournisseur;
 import com.esprit.examen.entities.DetailFournisseur;
 import com.esprit.examen.entities.Fournisseur;
 import com.esprit.examen.repositories.DetailFournisseurRepository;
 import com.esprit.examen.repositories.FournisseurRepository;
 import com.esprit.examen.repositories.ProduitRepository;
 import com.esprit.examen.repositories.SecteurActiviteRepository;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.HashSet;
 
 
 import java.util.Optional;
@@ -45,7 +52,6 @@ public class FournisseurServiceImplTest {
     private SecteurActiviteRepository secteurActiviteRepository;
 
 
-
     @Test
     void testRetrieveFournisseur() {
 
@@ -64,6 +70,8 @@ public class FournisseurServiceImplTest {
         verify(fournisseurRepository).findById((Long) any());
     }
 
+
+
     @Test
     void testAddFournisseur() {
         DetailFournisseur detailFournisseur = new DetailFournisseur();
@@ -77,10 +85,6 @@ public class FournisseurServiceImplTest {
         assertSame(fournisseur, fournisseurServiceImpl.addFournisseur(fournisseur));
         verify(fournisseurRepository).save((Fournisseur) any());
     }
-
-
-
-
 
 
 }

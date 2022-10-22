@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mysqldb
-    build: ./spring-app
+    image: hsounabm/spring-app:latest
     restart: on-failure
     env_file: ./.env
     ports:

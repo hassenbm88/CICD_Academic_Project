@@ -31,8 +31,6 @@ x
 Hsrc/main/java/com/esprit/examen/controllers/ReglementRestController.java,e/5/e5bc7432ec234bbbdf3bdf17d993fea2a2ee5324
 z
 Jsrc/main/java/com/esprit/examen/controllers/SecteurActiviteController.java,2/c/2c9f349fc058f68a436d43002e46b4478f4314c5
-t
-Dsrc/main/java/com/esprit/examen/controllers/StockRestController.java,a/9/a979ed08a53f7ca9f1bb727410f85a263ca584b6
 u
 Esrc/main/java/com/esprit/examen/repositories/OperateurRepository.java,d/c/dc28e2935f6ba8b7de22af972b3248c13aa9ba1e
 s
