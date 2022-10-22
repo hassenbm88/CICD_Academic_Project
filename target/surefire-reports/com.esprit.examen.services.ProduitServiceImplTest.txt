@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.esprit.examen.services.ProduitServiceImplTest
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.136 s - in com.esprit.examen.services.ProduitServiceImplTest
