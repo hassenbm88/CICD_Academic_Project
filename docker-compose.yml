@@ -20,7 +20,7 @@ services:
     container_name: springboot_container
     ##restart: on-failure
     ports:
-      - 8000:8089
+      - 8089:8089
     volumes:
       - .m2:/root/.m2
     stdin_open: true
