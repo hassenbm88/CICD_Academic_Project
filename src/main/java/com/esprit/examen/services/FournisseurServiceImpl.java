@@ -81,7 +81,6 @@ public class FournisseurServiceImpl implements IFournisseurService {
 		try {
 			fournisseur.getSecteurActivites().add(secteurActivite);
 			fournisseurRepository.save(fournisseur);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -65,7 +65,6 @@ public class ProduitServiceImpl implements IProduitService {
 		try {
 			produit.setStock(stock);
 			produitRepository.save(produit);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

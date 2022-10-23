@@ -116,12 +116,10 @@ public class FactureServiceImpl implements IFactureService {
 		try {
 			operateur.getFactures().add(facture);
 			operateurRepository.save(operateur);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 	@Override
 	public float pourcentageRecouvrement(Date startDate, Date endDate) {
 		float totalFacturesEntreDeuxDates = factureRepository.getTotalFacturesEntreDeuxDates(startDate,endDate);
