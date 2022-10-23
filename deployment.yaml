@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tp-achat-container
-          image: hsounabm/tpachatproject-1.0
+          image: manelbaabou/tpachatproject-1.0
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
