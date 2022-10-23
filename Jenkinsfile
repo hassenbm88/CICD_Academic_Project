@@ -18,21 +18,23 @@ pipeline{
         }
         
         
+        stage('Unit Tests') {
+            steps{
+                sh "mvn test " 
+            }
+        }
+        
+        
+        
         stage('Artifact Construction') {
             steps{
                 sh "mvn -B -DskipTests package " 
             }
         }
         
-         stage('Unit Tests') {
-            steps{
-                sh "mvn test " 
-            }
-        }
+         
         
-      
-        
-        
+     
         stage('Code Quality Check via SonarQube') {
             steps{
                 
