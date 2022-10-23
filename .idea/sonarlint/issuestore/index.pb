@@ -37,3 +37,13 @@ u
 Esrc/main/java/com/esprit/examen/repositories/ReglementRepository.java,5/f/5ffc930d3fd7eec9efb67a0a689d990b7d042e49
 y
 Isrc/main/java/com/esprit/examen/services/CategorieProduitServiceImpl.java,f/e/fe47f79b899f283ed8c1a06df5d2a72de863d989
+x
+Hsrc/main/java/com/esprit/examen/services/SecteurActiviteServiceImpl.java,6/a/6ae765325b1f2d763b36dbf31b9cacdcb2a384f2
+n
+>src/main/java/com/esprit/examen/services/StockServiceImpl.java,d/c/dc8827d3881970832f9292cbaa45d4234958ce5d
+v
+Fsrc/main/java/com/esprit/examen/controllers/ProduitRestController.java,6/7/6731c3bcc3d705b1bb66abef21bea88612300b00
+z
+Jsrc/main/java/com/esprit/examen/controllers/FournisseurRestController.java,b/2/b292f7ce055ebdb34be5597c72ea98e6225e38d5
+r
+Bsrc/main/java/com/esprit/examen/services/OperateurServiceImpl.java,1/5/159d6ba171f353b11edb12725da3dec95df4a762
