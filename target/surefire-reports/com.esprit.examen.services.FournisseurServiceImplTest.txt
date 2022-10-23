@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.esprit.examen.services.FournisseurServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.295 s - in com.esprit.examen.services.FournisseurServiceImplTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.917 s - in com.esprit.examen.services.FournisseurServiceImplTest

@@ -85,6 +85,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>DevOps_CI-CD</finalName>
 	</build>
 	<distributionManagement>
 		<repository>
