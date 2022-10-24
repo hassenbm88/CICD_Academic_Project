@@ -70,6 +70,7 @@ pipeline{
                           }
                       }
                   }
+    }
 
      post {
             always{
