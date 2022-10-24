@@ -22,7 +22,7 @@ services:
     image: manelbaabou/spring-app:latest
     container_name: springboot_container
     ##restart: on-failure
-   env_file: ./.env
+    env_file: ./.env
     ports:
       - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
     environment:
