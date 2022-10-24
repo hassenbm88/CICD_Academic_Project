@@ -56,7 +56,7 @@ pipeline{
     stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t yassinedockeer/spring-app:latest .'
+                            sh 'docker build -t yassinedockeer/spring-app .'
                           }
                       }
                   }
@@ -64,9 +64,9 @@ pipeline{
                       steps {
                           script {
                            
-                              sh 'docker login -u yassinedockeer -p {azeqs.123}'
+                              sh 'docker login -u yassinedockeer -p azeqs.123'
                            
-                           sh 'docker push yassinedockeer/spring-app:latest'
+                           sh 'docker push yassinedockeer/spring-app'
                           }
                       }
                   }
