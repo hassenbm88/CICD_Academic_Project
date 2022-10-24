@@ -70,7 +70,7 @@ pipeline{
                           }
                       }
                   }
-    }
+    
     stage('Run Spring & MySQL Containers') {
             steps {
                 script {
@@ -78,6 +78,7 @@ pipeline{
                 }
             }
         }
+    }
 
      post {
             always{
