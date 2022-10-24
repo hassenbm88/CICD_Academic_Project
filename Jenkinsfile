@@ -60,7 +60,7 @@ pipeline{
                           }
                       }
                   }
-                  stage('Push Docker Image') {
+     stage('Push Docker ') {
                       steps {
                           script {
                            withCredentials([usernameColonPassword(credentialsId: '5f85e097-f908-41d0-8131-613cac0adb04', variable: 'var')]) {
@@ -70,7 +70,7 @@ pipeline{
                           }
                       }
                   }
-        
+}
      post {
             always{
                 
