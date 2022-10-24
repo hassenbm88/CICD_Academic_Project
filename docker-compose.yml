@@ -1,29 +1,23 @@
-version: "3.3"
-
+version: '3.3'
 services:
   mysqldb:
-    image: mysql:8.0
-    container_name: mysqldb_container
-    restart: unless-stopped
-    env_file: ./.env
+    image: 'mysql:5.7'
     environment:
-      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
-      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=tpachato
     ports:
-      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
-    volumes:
-      - db:/var/lib/mysql
+      - "3307:3306"
   app:
+    image: nawres2121/spring-app:latest
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/tpachato?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: "root"
+      SPRING_DATASOURCE_PASSWORD: "root"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
     depends_on:
       - mysqldb
-    image: hsounabm/spring-app:latest
-    container_name: springboot_container
-    ##restart: on-failure
-    ports:
-      - 8089:8089
-    volumes:
-      - .m2:/root/.m2
-    stdin_open: true
-    tty: true
-volumes:
-  db:
