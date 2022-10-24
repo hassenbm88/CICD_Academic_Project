@@ -8,10 +8,10 @@ services:
       - MYSQL_DATABASE=tpachato
     ports:
       - "3307:3306"
-  springboot-docker-container:
-    image: amine1250/devops_cicd:latest
+  app:
+    image: manelbaabou/spring-app:latest
     ports:
-      - "8082:8082"
+      - "8089:8089"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/tpachato?autoReconnect=true&useSSL=false
       SPRING_DATASOURCE_USERNAME: "root"
