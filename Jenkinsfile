@@ -53,6 +53,24 @@ pipeline{
         
        
 } 
+    stage('Build Docker Image') {
+                      steps {
+                          script {
+                            sh 'docker build -t yassinedockeer/spring-app .'
+                          }
+                      }
+                  }
+                  stage('Push Docker Image') {
+                      steps {
+                          script {
+                           withCredentials([usernameColonPassword(credentialsId: '5f85e097-f908-41d0-8131-613cac0adb04', variable: 'var')]) {
+                              sh 'docker login -u yassinedockeer -p ${var}'
+                           }
+                           sh 'docker push yassinedockeer/spring-app'
+                          }
+                      }
+                  }
+        
      post {
             always{
                 
