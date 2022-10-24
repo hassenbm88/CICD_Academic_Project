@@ -85,11 +85,12 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
 	</build>
 	<distributionManagement>
 		<repository>
 			<id>deploymentRepo</id>
-			<url>http://192.168.1.115:8081/repository/maven-releases/</url>
+			<url>http://10.177.3.14:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
 </project>
