@@ -63,9 +63,9 @@ pipeline{
      stage('Push Docker ') {
                       steps {
                           script {
-                           withCredentials([usernameColonPassword(credentialsId: '5f85e097-f908-41d0-8131-613cac0adb04', variable: 'var')]) {
-                              sh 'docker login -u yassinedockeer -p ${var}'
-                           }
+                           
+                              sh 'docker login -u yassinedockeer -p {azeqs.123}'
+                           
                            sh 'docker push yassinedockeer/spring-app'
                           }
                       }
