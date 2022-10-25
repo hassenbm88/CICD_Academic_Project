@@ -37,7 +37,12 @@
  # db:
 version: "3"
 services:
-
+  front-ent:
+    image: anissaidi/front
+    ports:
+      - 80:80
+    container_name: angular_container
+    restart: on-failure  
   back-end:
     #      container-name: spring-app
     image: anissaidi/cicd
