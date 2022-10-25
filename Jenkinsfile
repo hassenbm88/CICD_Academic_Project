@@ -83,13 +83,6 @@ configFileProvider([configFile(fileId: 'maven-settings', variable: 'settings')])
                   }
             
         
-         stage('Deploy to k8s'){
-            steps{
-                script{
-                    kubernetesDeploy (configs: 'deployment.yaml', kubeconfigId: 'minikube')
-                }
-            }
-        }
         
 } 
     
