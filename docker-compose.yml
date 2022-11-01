@@ -45,7 +45,7 @@ services:
     restart: on-failure  
   back-end:
     #      container-name: spring-app
-    image: anissaidi/DEVOPScicd
+    image: anissaidi/backcicd
     restart: always
     ports:
       - 8089:8089
