@@ -38,10 +38,10 @@
 version: "3"
 services:
   front-ent:
-    image: anissaidi/front
+    image: anissaidi/frontcicdtest
     ports:
       - 80:80
-    container_name: angular_container
+    container_name: testfront
     restart: on-failure  
   back-end:
     #      container-name: spring-app
