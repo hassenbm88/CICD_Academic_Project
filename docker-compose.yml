@@ -40,7 +40,7 @@ services:
   front-ent:
     image: anissaidi/fronttestci
     ports:
-      - 80:80
+      - 4000:80
     container_name: testfront
     restart: on-failure  
   back-end:
