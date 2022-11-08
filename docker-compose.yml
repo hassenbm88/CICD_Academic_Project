@@ -38,13 +38,13 @@
 version: "3"
 services:
   front-ent:
-    image: anissaidi/frontcicdtest
+    image: anissaidi/fronttestci
     ports:
       - 80:80
     container_name: testfront
     restart: on-failure  
   back-end:
-    #      container-name: spring-app
+    container_name: backcicd
     image: anissaidi/backcicd
     restart: always
     ports:
